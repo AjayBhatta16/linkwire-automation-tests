@@ -17,6 +17,8 @@ def before_each(page: Page):
 
     expect(page).to_have_url("https://app.linkwire.cc/dashboard")
 
+    page.wait_for_timeout(1000)
+
 def test_create_link_succeeds(page: Page):
     before_each(page)
 
