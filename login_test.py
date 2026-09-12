@@ -2,6 +2,9 @@ import os
 import uuid
 
 from playwright.sync_api import Page, expect
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def test_login_succeeds_with_username(page: Page):
     page.goto("https://app.linkwire.cc")
