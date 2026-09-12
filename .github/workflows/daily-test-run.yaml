@@ -31,6 +31,14 @@ jobs:
     - name: Ensure browsers are installed
       run: python -m playwright install --with-deps
 
+    - name: Debugging step
+      run: |
+        pwd
+        echo "\n"
+        wc -l .env
+        echo "\n"
+        ls -a
+
     - name: Run your tests
       run: pytest --tracing=retain-on-failure
       
